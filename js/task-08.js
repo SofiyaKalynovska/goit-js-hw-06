@@ -13,8 +13,11 @@ function onSubmit(event) {
   if (email.value === "" || password.value === "") {
     return alert("Please fill all the fields!");
   }
-
-  console.log(`Login: ${email.value}, password: ${password.value}`)
+  const messageWithProvidedPrivateInfoAsObj = {
+    Login: email.value,
+    password: password.value,
+ }
+  console.log(messageWithProvidedPrivateInfoAsObj)
   
   event.currentTarget.reset();
 }
